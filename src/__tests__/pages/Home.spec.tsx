@@ -112,17 +112,17 @@ describe('Home', () => {
     const getStaticPropsContext: GetStaticPropsContext<ParsedUrlQuery> = {};
 
     const response = (await getStaticProps(
-      getStaticPropsContext
+      getStaticPropsContext,
     )) as GetStaticPropsResult;
 
     expect(response.props.postsPagination.next_page).toEqual(
-      postsPaginationReturn.next_page
+      postsPaginationReturn.next_page,
     );
     expect(response.props.postsPagination.results).toEqual(
       expect.arrayContaining([
         expect.objectContaining(postsPaginationReturn.results[0]),
         expect.objectContaining(postsPaginationReturn.results[1]),
-      ])
+      ]),
     );
   });
 
@@ -138,7 +138,7 @@ describe('Home', () => {
 
     screen.getByText('Criando um app CRA do zero');
     screen.getByText(
-      'Tudo sobre como criar a sua primeira aplicação utilizando Create React App'
+      'Tudo sobre como criar a sua primeira aplicação utilizando Create React App',
     );
     screen.getByText('15 mar 2021');
     screen.getByText('Danilo Vieira');
@@ -161,13 +161,13 @@ describe('Home', () => {
       1,
       '/post/como-utilizar-hooks',
       expect.anything(),
-      expect.anything()
+      expect.anything(),
     );
     expect(mockedPush).toHaveBeenNthCalledWith(
       2,
       '/post/criando-um-app-cra-do-zero',
       expect.anything(),
-      expect.anything()
+      expect.anything(),
     );
   });
 
@@ -196,7 +196,7 @@ describe('Home', () => {
       () => {
         expect(mockedFetch).toHaveBeenCalled();
       },
-      { timeout: 200 }
+      { timeout: 200 },
     );
 
     screen.getByText('Criando um app CRA do zero');

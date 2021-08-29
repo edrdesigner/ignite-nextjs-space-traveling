@@ -1,1 +1,82 @@
-// TODO
+.container {
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+  }
+}
+
+.post {
+  max-width: 720px;
+  margin: 5rem auto 0;
+
+  h1 {
+    color: var(--heading);
+  }
+
+  .postInfo {
+    color: var(--info);
+    padding-top: 1.5rem;
+
+    time,
+    span {
+      margin-right: 2rem;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      vertical-align: bottom;
+    }
+
+    time,
+    span {
+      padding-left: 0.5rem;
+      top: 0.5rem;
+    }
+  }
+
+  .postContent {
+    h2 {
+      padding-top: 2rem;
+      color: var(--heading);
+    }
+
+    p {
+      padding-top: 2.5rem;
+      text-align: justify;
+      padding-bottom: 2.5rem;
+    }
+  }
+
+  .predictPosts {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    border-top: 1px solid rgba(#d7d7d7, 10%);
+    margin-top: 2rem;
+    padding: 4rem 0;
+
+    .postItem {
+      flex-basis: 0;
+      flex-grow: 1;
+      max-width: 100%;
+      font-size: 1.1rem;
+
+      a {
+        color: #ff57b2;
+        font-weight: bold;
+        font-size: 1rem;
+      }
+
+      &.prev {
+        text-align: left;
+      }
+
+      &.next {
+        text-align: right;
+      }
+    }
+  }
+}
